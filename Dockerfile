@@ -43,6 +43,18 @@ RUN mkdir -p /tmp/jni
 COPY /jni/Android.mk /tmp/jni
 COPY /jni/Application.mk /tmp/jni
 
+# iPerf 3.6
+
+RUN cd /tmp && \
+    wget -q https://downloads.es.net/pub/iperf/iperf-3.6.tar.gz && \
+    tar -zxvf iperf-3.6.tar.gz && \
+    rm -f iperf-3.6.tar.gz
+
+COPY /iperf-3.6/Android.mk /tmp/iperf-3.6
+RUN cd /tmp/iperf-3.6 && \
+    autoconf && \
+    ./configure
+
 # iPerf 3.7
 
 RUN cd /tmp && \
