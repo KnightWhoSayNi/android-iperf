@@ -37,7 +37,26 @@ ENV NDK_PROJECT_PATH=/tmp
 
 RUN apt-get clean
 
+#
+
+RUN mkdir -p /tmp/jni
+COPY /jni/Android.mk /tmp/jni
+COPY /jni/Application.mk /tmp/jni
+
+# iPerf 3.7
+
+ENV IPERF_3_7_FOLDER = iperf_3.7
+
 RUN cd /tmp && \
-    wget -q https://downloads.es.net/pub/iperf/iperf-3.7.tar.gz && \
-    tar -zxvf iperf-3.7.tar.gz && \
-    rm -f iperf-3.7.tar.gz
+    wget -q https://downloads.es.net/pub/iperf/${IPERF_3_7_FOLDER}.tar.gz && \
+    tar -zxvf ${IPERF_3_7_FOLDER}.tar.gz && \
+    rm -f ${IPERF_3_7_FOLDER}.tar.gz
+
+COPY /${IPERF_3_7_FOLDER}/Android.mk /tmp/${IPERF_3_7_FOLDER}
+RUN cd /tmp/${IPERF_3_7_FOLDER} && \
+    autoconf && \
+    ./configure
+
+# Compile
+
+RUN ndk-build NDK_APPLICATION_MK=/tmp/jni/Application.mk
