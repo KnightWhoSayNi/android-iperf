@@ -18,10 +18,10 @@ script:
   - mkdir -p binaries
   - docker cp -a android-ndk-container:/tmp/libs binaries
 
-# deploy:
-#   provider: pages
-#   skip_cleanup: true
-#   github_token: $GITHUB_TOKEN
-#   local_dir: binaries
-#   on:
-#     branch: master
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: binaries
+  on:
+    branch: master
