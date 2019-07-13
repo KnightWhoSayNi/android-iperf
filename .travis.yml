@@ -5,6 +5,10 @@ sudo: false
 git:
     quiet: true
 
+branches:
+  except:
+    - gh-pages
+
 services:
   - docker
 

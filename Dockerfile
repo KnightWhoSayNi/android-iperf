@@ -70,3 +70,5 @@ RUN cd /tmp/iperf-3.7 && \
 # Compile
 
 RUN ndk-build NDK_APPLICATION_MK=/tmp/jni/Application.mk
+
+RUN tree /tmp/libs
