@@ -4,6 +4,28 @@
 
 ## Getting Started
 
+> **What is iPerf / iPerf3** ?
+>
+> iPerf3 is a tool for active measurements of the maximum achievable bandwidth on IP networks. It supports tuning of various parameters related to timing, buffers and protocols (TCP, UDP, SCTP with IPv4 and IPv6). For each test it reports the bandwidth, loss, and other parameters. This is a new implementation that shares no code with the original iPerf and also is not backwards compatible. iPerf was orginally developed by NLANR/DAST. iPerf3 is principally developed by ESnet / Lawrence Berkeley National Laboratory. It is released under a three-clause BSD license.
+>
+> [*https://iperf.fr/*](https://iperf.fr/)
+
+
+### Supported versions
+
+| Version        | Release day           |
+| ------------- |:-------------:|
+| `3.1.6`    | 02-Feb-2017 |
+| `3.1.7`     | 03-Mar-2017 |
+| `3.2`     | 26-Jun-2017 |
+| `3.2rc1`     | 19-Jun-2017 |
+| `3.3`     | 30-Oct-2017 |
+| `3.4`     | 12-Feb-2018 |
+| `3.5`     | 28-Feb-2018 |
+| `3.6`     | 22-Jun-2018 |
+| `3.7`     | 20-Jun-2019 |
+
+iPerf3 source codes come from [https://downloads.es.net/pub/iperf/](https://downloads.es.net/pub/iperf/)
 
 ### Prerequisites
 
@@ -29,6 +51,8 @@ docker stop android-ndk-container
 
 ## Download
 
+Pre-build binaries from [Travis-CI Deployment](https://travis-ci.com/KnightWhoSayNi/android-iperf)
+
 | ABI        | Binaries           |
 | ------------- |:-------------:|
 | arm64-v8a     | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/arm64-v8a) |
@@ -36,7 +60,7 @@ docker stop android-ndk-container
 | x86 | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/x86)     |
 | x86_64 | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/)     |
 
-More about *Application Binary Interface* (ABI): https://developer.android.com/ndk/guides/abis
+More about *Application Binary Interface* (ABI): [https://developer.android.com/ndk/guides/abis](https://developer.android.com/ndk/guides/abis)
 
 To get supported ABI by an Android device:
 
@@ -54,4 +78,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-iPerf community - https://iperf.fr/
+iPerf community - [iperf.fr](https://iperf.fr/)
