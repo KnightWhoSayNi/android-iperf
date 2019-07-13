@@ -6,8 +6,8 @@ git:
     quiet: true
 
 branches:
-  except:
-    - gh-pages
+  only:
+    - master
 
 services:
   - docker

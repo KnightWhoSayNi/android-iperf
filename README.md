@@ -11,6 +11,15 @@
 ### Running
 
 
+## Download
+
+| ABI        | Binaries           |
+| ------------- |:-------------:|
+| arm64-v8a     | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/arm64-v8a) |
+| armeabi-v7a      | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/armeabi-v7a)      |
+| x86 | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/x86)     |
+| x86_64 | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/)     |
+
 
 ## License
 
