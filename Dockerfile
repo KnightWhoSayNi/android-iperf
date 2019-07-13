@@ -37,11 +37,59 @@ ENV NDK_PROJECT_PATH=/tmp
 
 RUN apt-get clean
 
-#
+# Config files
 
 RUN mkdir -p /tmp/jni
 COPY /jni/Android.mk /tmp/jni
 COPY /jni/Application.mk /tmp/jni
+
+# iPerf 3.1.6
+
+RUN cd /tmp && \
+    wget -q https://downloads.es.net/pub/iperf/iperf-3.1.6.tar.gz && \
+    tar -zxvf iperf-3.1.6.tar.gz && \
+    rm -f iperf-3.1.6.tar.gz
+
+COPY /iperf-3.1.6/Android.mk /tmp/iperf-3.1.6
+RUN cd /tmp/iperf-3.1.6 && \
+    autoconf && \
+    ./configure
+
+# iPerf 3.1.7
+
+RUN cd /tmp && \
+    wget -q https://downloads.es.net/pub/iperf/iperf-3.1.7.tar.gz && \
+    tar -zxvf iperf-3.1.7.tar.gz && \
+    rm -f iperf-3.1.7.tar.gz
+
+COPY /iperf-3.1.7/Android.mk /tmp/iperf-3.1.7
+RUN cd /tmp/iperf-3.1.7 && \
+    autoconf && \
+    ./configure
+
+# iPerf 3.2
+
+RUN cd /tmp && \
+    wget -q https://downloads.es.net/pub/iperf/iperf-3.2.tar.gz && \
+    tar -zxvf iperf-3.2.tar.gz && \
+    rm -f iperf-3.2.tar.gz
+
+COPY /iperf-3.2/Android.mk /tmp/iperf-3.2
+RUN cd /tmp/iperf-3.2 && \
+    autoconf && \
+    ./configure
+
+# iPerf 3.2rc1
+
+RUN cd /tmp && \
+    wget -q https://downloads.es.net/pub/iperf/iperf-3.2rc1.tar.gz && \
+    tar -zxvf iperf-3.2rc1.tar.gz && \
+    rm -f iperf-3.2rc1.tar.gz
+
+COPY /iperf-3.2rc1/Android.mk /tmp/iperf-3.2rc1
+RUN cd /tmp/iperf-3.2rc1 && \
+    autoconf && \
+    ./configure
 
 # iPerf 3.3
 
