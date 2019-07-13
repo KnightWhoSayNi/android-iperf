@@ -18,9 +18,9 @@ RUN wget -q ${ANDROID_SDK_URL} && \
 ENV PATH=${PATH}:${ANDROID_SDK_HOME}/tools:${ANDROID_SDK_HOME}/tools/bin:${ANDROID_SDK_HOME}/platform-tools
 
 RUN yes | sdkmanager --licenses
-RUN yes | sdkmanager "platforms;android-21"
+RUN yes | sdkmanager "platforms;android-24"
 
-ENV ANDROID_NDK_VERSION r20
+ENV ANDROID_NDK_VERSION r19
 ENV ANDROID_NDK_HOME /opt/android-ndk
 ENV ANDROID_NDK_FILENAME android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64
 ENV ANDROID_NDK_URL https://dl.google.com/android/repository/${ANDROID_NDK_FILENAME}.zip
@@ -42,6 +42,32 @@ RUN apt-get clean
 RUN mkdir -p /tmp/jni
 COPY /jni/Android.mk /tmp/jni
 COPY /jni/Application.mk /tmp/jni
+
+# iPerf 2.0.5
+
+RUN cd /tmp && \
+    wget -q -O iperf-2.0.5.tar.gz https://iperf.fr/download/source/iperf-2.0.5-source.tar.gz && \
+    tar -zxvf iperf-2.0.5.tar.gz && \
+    rm -f iperf-2.0.5.tar.gz
+
+COPY /iperf-2.0.5/Android.mk /tmp/iperf-2.0.5
+
+RUN cd /tmp/iperf-2.0.5 && \
+    autoconf && \
+    ./configure
+
+# iPerf 2.0.10
+
+RUN cd /tmp && \
+    wget -q https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.10.tar.gz && \
+    tar -zxvf iperf-2.0.10.tar.gz && \
+    rm -f iperf-2.0.10.tar.gz
+
+COPY /iperf-2.0.10/Android.mk /tmp/iperf-2.0.10
+
+RUN cd /tmp/iperf-2.0.10 && \
+    autoconf && \
+    ./configure
 
 # iPerf 3.1.6
 
