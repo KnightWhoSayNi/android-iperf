@@ -1,4 +1,9 @@
+language: generic
+
 sudo: false
+
+git:
+    quiet: true
 
 services:
   - docker
