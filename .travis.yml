@@ -16,4 +16,3 @@ script:
   - docker build -t android-ndk:latest .
   - docker run -d --name android-ndk-container android-ndk
   - docker cp -a android-ndk-container:/tmp/libs HOME
-  - ls -las /tmp/libs
