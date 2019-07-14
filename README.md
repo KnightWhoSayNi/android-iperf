@@ -20,20 +20,22 @@
 | ------------- |:-------------:|-------------:|
 | `2.0.5`    | 2010-07-08 | [Source Code](https://iperf.fr/download/source/iperf-2.0.5-source.tar.gz) |
 | `2.0.10`    | 2017-08-11 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.10.tar.gz) |
+| `2.0.12`    | 2018-06-26 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.12.tar.gz) |
+| `2.0.13`    | 2019-01-22 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.13.tar.gz) |
 
 #### iPerf3
 
 | Version        | Release day           | Source Code  |
 | ------------- |:-------------:|-------------:|
-| `3.1.6`    | 02-Feb-2017 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.1.6.tar.gz)  |
-| `3.1.7`     | 03-Mar-2017 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.1.7.tar.gz)  |
-| `3.2`     | 26-Jun-2017 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.2.tar.gz)  |
-| `3.2rc1`     | 19-Jun-2017 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.2rc1.tar.gz)  |
-| `3.3`     | 30-Oct-2017 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.3.tar.gz)  |
-| `3.4`     | 12-Feb-2018 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.4.tar.gz)  |
-| `3.5`     | 28-Feb-2018 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.5.tar.gz)  |
-| `3.6`     | 22-Jun-2018 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.6.tar.gz)  |
-| `3.7`     | 20-Jun-2019 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.7.tar.gz)  |
+| `3.1.6`    | 2017-02-02 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.1.6.tar.gz)  |
+| `3.1.7`     | 2017-03-03 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.1.7.tar.gz)  |
+| `3.2`     | 2017-06-26 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.2.tar.gz)  |
+| `3.2rc1`     | 2017-06-19 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.2rc1.tar.gz)  |
+| `3.3`     | 2017-10-30 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.3.tar.gz)  |
+| `3.4`     | 2018-02-12 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.4.tar.gz)  |
+| `3.5`     | 2018-02-28 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.5.tar.gz)  |
+| `3.6`     | 2018-06-22 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.6.tar.gz)  |
+| `3.7`     | 2019-06-20 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.7.tar.gz)  |
 
 
 ### Download
@@ -45,7 +47,7 @@ Pre-build binaries for Android `7.0` (API `level 24`) with SDK `4333796` and NDK
 | arm64-v8a     | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/arm64-v8a) |
 | armeabi-v7a      | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/armeabi-v7a)      |
 | x86 | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/x86)     |
-| x86_64 | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/)     |
+| x86_64 | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/x86_64)     |
 
 More about *Application Binary Interface* (ABI): [https://developer.android.com/ndk/guides/abis](https://developer.android.com/ndk/guides/abis)
 

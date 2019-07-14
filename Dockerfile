@@ -69,6 +69,47 @@ RUN cd /tmp/iperf-2.0.10 && \
     autoconf && \
     ./configure
 
+# iPerf 2.0.12
+
+RUN cd /tmp && \
+    wget -q https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.12.tar.gz && \
+    tar -zxvf iperf-2.0.12.tar.gz && \
+    rm -f iperf-2.0.12.tar.gz
+
+COPY /iperf-2.0.12/Android.mk /tmp/iperf-2.0.12
+
+RUN cd /tmp/iperf-2.0.12 && \
+    autoconf && \
+    ./configure
+
+# Workaround - https://stackoverflow.com/questions/30801752/android-ndk-and-pthread
+# POSIX threads (pthreads)
+# The android libc, bionic, provides build-in support for pthreads, so no additional linking (-lphtreads) is necessary. It does not implement full POSIX threads functionality and leaves out support for read/write locks, pthread_cancel(), process-shared mutexes and condition variables as well as other more advaced features.
+# Read the bionic OVERVIEW.txt for more information. TLS, thread-local storage, is limited to 59 pthread_key_t slots available to applications, lower than the posix minimum of 128.
+
+COPY /iperf-2.0.12/config.h /tmp/iperf-2.0.12
+
+# iPerf 2.0.13
+
+RUN cd /tmp && \
+    wget -q https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.13.tar.gz && \
+    tar -zxvf iperf-2.0.13.tar.gz && \
+    rm -f iperf-2.0.13.tar.gz
+
+# COPY /ndk_fix/ifaddrs.c /tmp/iperf-2.0.13/src
+
+COPY /iperf-2.0.13/Android.mk /tmp/iperf-2.0.13
+RUN cd /tmp/iperf-2.0.13 && \
+    autoconf && \
+    ./configure
+
+# Workaround - https://stackoverflow.com/questions/30801752/android-ndk-and-pthread
+# POSIX threads (pthreads)
+# The android libc, bionic, provides build-in support for pthreads, so no additional linking (-lphtreads) is necessary. It does not implement full POSIX threads functionality and leaves out support for read/write locks, pthread_cancel(), process-shared mutexes and condition variables as well as other more advaced features.
+# Read the bionic OVERVIEW.txt for more information. TLS, thread-local storage, is limited to 59 pthread_key_t slots available to applications, lower than the posix minimum of 128.
+
+COPY /iperf-2.0.13/config.h /tmp/iperf-2.0.13
+
 # iPerf 3.1.6
 
 RUN cd /tmp && \
@@ -178,6 +219,8 @@ RUN cd /tmp/iperf-3.7 && \
     ./configure
 
 # Compile
+
+RUN ndk-build clean
 
 RUN ndk-build NDK_APPLICATION_MK=/tmp/jni/Application.mk
 
