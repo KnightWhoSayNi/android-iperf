@@ -54,7 +54,7 @@ More about *Application Binary Interface* (ABI): [https://developer.android.com/
 To get supported ABI by an Android device:
 
 ```shell
-adb shell cat /proc/cpuinfo
+adb shell getprop ro.product.cpu.abilist
 ```
 
 ## Build
