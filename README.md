@@ -20,8 +20,8 @@
 | ------------- |:-------------:|-------------:|
 | `2.0.5`    | 2010-07-08 | [Source Code](https://iperf.fr/download/source/iperf-2.0.5-source.tar.gz) |
 | `2.0.10`    | 2017-08-11 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.10.tar.gz) |
-| `2.0.12`    | 2018-06-26 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.12.tar.gz) |
-| `2.0.13`    | 2019-01-22 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.13.tar.gz) |
+| `2.0.12` compiled w/o `PTHREADS`!    | 2018-06-26 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.12.tar.gz) |
+| `2.0.13` compiled w/o `PTHREADS`!    | 2019-01-22 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.13.tar.gz) |
 
 #### iPerf3
 
@@ -40,7 +40,7 @@
 
 ### Download
 
-Pre-build binaries for Android `7.0` (API `level 24`) with SDK `4333796` and NDK `r19` using [Travis-CI Deployment](https://travis-ci.com/KnightWhoSayNi/android-iperf).
+Pre-build iPerf/iPerf3 binaries for Android `7.0` (API `level 24`) with SDK `4333796` and NDK `r19` using [Travis-CI Deployment](https://travis-ci.com/KnightWhoSayNi/android-iperf).
 
 | ABI        | Binaries           |
 | ------------- |:-------------:|

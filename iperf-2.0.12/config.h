@@ -300,7 +300,7 @@
 #define PACKAGE_NAME "Iperf"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "Iperf 2.0.13"
+#define PACKAGE_STRING "Iperf 2.0.12"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "iperf"
@@ -309,7 +309,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.0.13"
+#define PACKAGE_VERSION "2.0.12"
 
 /* Define to the necessary symbol if this constant uses a non-standard name on
    your system. */
@@ -343,7 +343,7 @@
 /* #undef TM_IN_SYS_TIME */
 
 /* Version number of package */
-#define VERSION "2.0.13"
+#define VERSION "2.0.12"
 
 /* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
    significant byte first (like Motorola and SPARC, unlike Intel). */
