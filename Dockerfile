@@ -214,6 +214,7 @@ RUN cd /tmp && \
     rm -f iperf-3.7.tar.gz
 
 COPY /iperf-3.7/Android.mk /tmp/iperf-3.7
+COPY /iperf-3.7/iperf_api.c /tmp/iperf-3.7/src
 RUN cd /tmp/iperf-3.7 && \
     autoconf && \
     ./configure
