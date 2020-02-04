@@ -10,8 +10,6 @@
 >
 > [*https://iperf.fr/*](https://iperf.fr/)
 
-**Remark** No iPerf/iPerf3 source codes are included in this repo
-
 ### Supported versions
 
 #### iPerf2
@@ -38,16 +36,7 @@
 | `3.7`     | 2019-06-20 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.7.tar.gz)  |
 
 
-### Download
-
-Pre-build iPerf/iPerf3 binaries for Android `7.0` (API `level 24`) with SDK `4333796` and NDK `r19` using [Travis-CI Deployment](https://travis-ci.com/KnightWhoSayNi/android-iperf).
-
-| ABI        | Binaries           |
-| ------------- |:-------------:|
-| arm64-v8a     | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/arm64-v8a) |
-| armeabi-v7a      | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/armeabi-v7a)      |
-| x86 | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/x86)     |
-| x86_64 | [here](https://github.com/KnightWhoSayNi/android-iperf/tree/gh-pages/libs/x86_64)     |
+### ABI
 
 More about *Application Binary Interface* (ABI): [https://developer.android.com/ndk/guides/abis](https://developer.android.com/ndk/guides/abis)
 
@@ -65,7 +54,13 @@ Docker
 
 ### Running
 
-1. Clone this repo
+1. For iperf3.7 select output destination according to project in iperf_api.c
+
+```shell
+line 3617: char* tempdir = "/data/local/tmp";
+replace with "<applicationContext.filesDir.path>/tmp" when building for an app
+```
+
 2. Build image from Dockerfile
 
 ```shell
@@ -89,6 +84,7 @@ To upload binary file to an Android device
 adb push <LOCAL_PATH_TO_BINARY_FILE> /data/local/tmp/<BINARY_NAME>
 adb shell chmod 777 /data/local/tmp/<BINARY_NAME>
 ```
+here /data/local/tmp is used but the path provided in iperf_api.c must be used if changed
 
 Set a default `iPerf2` version
 ```shell
@@ -109,7 +105,6 @@ Executing `iPerf3`
 ```shell
 adb shell /data/local/tmp/iperf3 <IPERF_ARGUMENTS>
 ```
-
 
 ## License
 
