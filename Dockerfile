@@ -10,7 +10,7 @@ ENV ANDROID_SDK_HOME /opt/android-sdk
 ENV ANDROID_SDK_FILENAME sdk-tools-linux-${ANDROID_SDK_VERSION}
 ENV ANDROID_SDK_URL https://dl.google.com/android/repository/${ANDROID_SDK_FILENAME}.zip
 
-RUN wget -q ${ANDROID_SDK_URL} && \
+RUN wget --no-check-certificate -q ${ANDROID_SDK_URL} && \
     mkdir -p ${ANDROID_SDK_HOME} && \
     unzip -q ${ANDROID_SDK_FILENAME}.zip -d ${ANDROID_SDK_HOME} && \
     rm -f ${ANDROID_SDK_FILENAME}.zip
@@ -25,7 +25,7 @@ ENV ANDROID_NDK_HOME /opt/android-ndk
 ENV ANDROID_NDK_FILENAME android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64
 ENV ANDROID_NDK_URL https://dl.google.com/android/repository/${ANDROID_NDK_FILENAME}.zip
 
-RUN wget -q ${ANDROID_NDK_URL} && \
+RUN wget --no-check-certificate -q ${ANDROID_NDK_URL} && \
     mkdir -p ${ANDROID_NDK_HOME} && \
     unzip -q ${ANDROID_NDK_FILENAME}.zip && \
     mv ./android-ndk-${ANDROID_NDK_VERSION}/* ${ANDROID_NDK_HOME} && \
@@ -46,7 +46,7 @@ COPY /jni/Application.mk /tmp/jni
 # iPerf 2.0.5
 
 RUN cd /tmp && \
-    wget -q -O iperf-2.0.5.tar.gz https://iperf.fr/download/source/iperf-2.0.5-source.tar.gz && \
+    wget --no-check-certificate -q -O iperf-2.0.5.tar.gz https://iperf.fr/download/source/iperf-2.0.5-source.tar.gz && \
     tar -zxvf iperf-2.0.5.tar.gz && \
     rm -f iperf-2.0.5.tar.gz
 
@@ -59,7 +59,7 @@ RUN cd /tmp/iperf-2.0.5 && \
 # iPerf 2.0.10
 
 RUN cd /tmp && \
-    wget -q https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.10.tar.gz && \
+    wget --no-check-certificate -q https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.10.tar.gz && \
     tar -zxvf iperf-2.0.10.tar.gz && \
     rm -f iperf-2.0.10.tar.gz
 
@@ -72,7 +72,7 @@ RUN cd /tmp/iperf-2.0.10 && \
 # iPerf 2.0.12
 
 RUN cd /tmp && \
-    wget -q https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.12.tar.gz && \
+    wget --no-check-certificate -q https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.12.tar.gz && \
     tar -zxvf iperf-2.0.12.tar.gz && \
     rm -f iperf-2.0.12.tar.gz
 
@@ -92,7 +92,7 @@ COPY /iperf-2.0.12/config.h /tmp/iperf-2.0.12
 # iPerf 2.0.13
 
 RUN cd /tmp && \
-    wget -q https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.13.tar.gz && \
+    wget --no-check-certificate -q https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.13.tar.gz && \
     tar -zxvf iperf-2.0.13.tar.gz && \
     rm -f iperf-2.0.13.tar.gz
 
@@ -113,7 +113,7 @@ COPY /iperf-2.0.13/config.h /tmp/iperf-2.0.13
 # iPerf 3.1.6
 
 RUN cd /tmp && \
-    wget -q https://downloads.es.net/pub/iperf/iperf-3.1.6.tar.gz && \
+    wget --no-check-certificate -q https://downloads.es.net/pub/iperf/iperf-3.1.6.tar.gz && \
     tar -zxvf iperf-3.1.6.tar.gz && \
     rm -f iperf-3.1.6.tar.gz
 
@@ -125,7 +125,7 @@ RUN cd /tmp/iperf-3.1.6 && \
 # iPerf 3.1.7
 
 RUN cd /tmp && \
-    wget -q https://downloads.es.net/pub/iperf/iperf-3.1.7.tar.gz && \
+    wget --no-check-certificate -q https://downloads.es.net/pub/iperf/iperf-3.1.7.tar.gz && \
     tar -zxvf iperf-3.1.7.tar.gz && \
     rm -f iperf-3.1.7.tar.gz
 
@@ -137,7 +137,7 @@ RUN cd /tmp/iperf-3.1.7 && \
 # iPerf 3.2
 
 RUN cd /tmp && \
-    wget -q https://downloads.es.net/pub/iperf/iperf-3.2.tar.gz && \
+    wget --no-check-certificate -q https://downloads.es.net/pub/iperf/iperf-3.2.tar.gz && \
     tar -zxvf iperf-3.2.tar.gz && \
     rm -f iperf-3.2.tar.gz
 
@@ -149,7 +149,7 @@ RUN cd /tmp/iperf-3.2 && \
 # iPerf 3.2rc1
 
 RUN cd /tmp && \
-    wget -q https://downloads.es.net/pub/iperf/iperf-3.2rc1.tar.gz && \
+    wget --no-check-certificate -q https://downloads.es.net/pub/iperf/iperf-3.2rc1.tar.gz && \
     tar -zxvf iperf-3.2rc1.tar.gz && \
     rm -f iperf-3.2rc1.tar.gz
 
@@ -161,7 +161,7 @@ RUN cd /tmp/iperf-3.2rc1 && \
 # iPerf 3.3
 
 RUN cd /tmp && \
-    wget -q https://downloads.es.net/pub/iperf/iperf-3.3.tar.gz && \
+    wget --no-check-certificate -q https://downloads.es.net/pub/iperf/iperf-3.3.tar.gz && \
     tar -zxvf iperf-3.3.tar.gz && \
     rm -f iperf-3.3.tar.gz
 
@@ -173,7 +173,7 @@ RUN cd /tmp/iperf-3.3 && \
 # iPerf 3.4
 
 RUN cd /tmp && \
-    wget -q https://downloads.es.net/pub/iperf/iperf-3.4.tar.gz && \
+    wget --no-check-certificate -q https://downloads.es.net/pub/iperf/iperf-3.4.tar.gz && \
     tar -zxvf iperf-3.4.tar.gz && \
     rm -f iperf-3.4.tar.gz
 
@@ -185,7 +185,7 @@ RUN cd /tmp/iperf-3.4 && \
 # iPerf 3.5
 
 RUN cd /tmp && \
-    wget -q https://downloads.es.net/pub/iperf/iperf-3.5.tar.gz && \
+    wget --no-check-certificate -q https://downloads.es.net/pub/iperf/iperf-3.5.tar.gz && \
     tar -zxvf iperf-3.5.tar.gz && \
     rm -f iperf-3.5.tar.gz
 
@@ -197,7 +197,7 @@ RUN cd /tmp/iperf-3.5 && \
 # iPerf 3.6
 
 RUN cd /tmp && \
-    wget -q https://downloads.es.net/pub/iperf/iperf-3.6.tar.gz && \
+    wget --no-check-certificate -q https://downloads.es.net/pub/iperf/iperf-3.6.tar.gz && \
     tar -zxvf iperf-3.6.tar.gz && \
     rm -f iperf-3.6.tar.gz
 
@@ -209,7 +209,7 @@ RUN cd /tmp/iperf-3.6 && \
 # iPerf 3.7
 
 RUN cd /tmp && \
-    wget -q https://downloads.es.net/pub/iperf/iperf-3.7.tar.gz && \
+    wget --no-check-certificate -q https://downloads.es.net/pub/iperf/iperf-3.7.tar.gz && \
     tar -zxvf iperf-3.7.tar.gz && \
     rm -f iperf-3.7.tar.gz
 
