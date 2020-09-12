@@ -218,6 +218,42 @@ RUN cd /tmp/iperf-3.7 && \
     autoconf && \
     ./configure
 
+# iPerf 3.8
+
+RUN cd /tmp && \
+    wget --no-check-certificate -q https://downloads.es.net/pub/iperf/iperf-3.8.tar.gz && \
+    tar -zxvf iperf-3.8.tar.gz && \
+    rm -f iperf-3.8.tar.gz
+
+COPY /iperf-3.8/Android.mk /tmp/iperf-3.8
+RUN cd /tmp/iperf-3.8 && \
+    autoconf && \
+    ./configure
+
+# iPerf 3.8.1
+
+RUN cd /tmp && \
+    wget --no-check-certificate -q https://downloads.es.net/pub/iperf/iperf-3.8.1.tar.gz && \
+    tar -zxvf iperf-3.8.1.tar.gz && \
+    rm -f iperf-3.8.1.tar.gz
+
+COPY /iperf-3.8.1/Android.mk /tmp/iperf-3.8.1
+RUN cd /tmp/iperf-3.8.1 && \
+    autoconf && \
+    ./configure
+
+# iPerf 3.9
+
+RUN cd /tmp && \
+    wget --no-check-certificate -q https://downloads.es.net/pub/iperf/iperf-3.9.tar.gz && \
+    tar -zxvf iperf-3.9.tar.gz && \
+    rm -f iperf-3.9.tar.gz
+
+COPY /iperf-3.9/Android.mk /tmp/iperf-3.9
+RUN cd /tmp/iperf-3.9 && \
+    autoconf && \
+    ./configure
+
 # Compile
 
 RUN ndk-build clean

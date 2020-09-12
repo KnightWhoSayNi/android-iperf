@@ -12,3 +12,6 @@ include /tmp/iperf-3.4/Android.mk
 include /tmp/iperf-3.5/Android.mk
 include /tmp/iperf-3.6/Android.mk
 include /tmp/iperf-3.7/Android.mk
+include /tmp/iperf-3.8/Android.mk
+include /tmp/iperf-3.8.1/Android.mk
+include /tmp/iperf-3.9/Android.mk
