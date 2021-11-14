@@ -16,20 +16,20 @@
 
 #### iPerf2
 
-| Version        | Release day           | Source Code  |
-| ------------- |:-------------:|-------------:|
-| `2.0.5`   | 2010-07-08 | [Source Code](https://iperf.fr/download/source/iperf-2.0.5-source.tar.gz) |
-| `2.0.10`  | 2017-08-11 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.10.tar.gz) |
-| `2.0.11` compiled w/o `HAVE_AF_PACKET` | 2018-05-24 |  [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.11.tar.gz) |
-| `2.0.12` compiled w/o `HAVE_AF_PACKET` | 2018-06-26 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.12.tar.gz) |
-| `2.0.13` compiled w/o `HAVE_AF_PACKET`  | 2019-01-22 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.13.tar.gz) |
-| `2.1.3` compiled w/o `HAVE_AF_PACKET`, `HAVE_LINUX_UDP_H`!    |   2021-07-15  | [Source Code](https://nav.dl.sourceforge.net/project/iperf2/iperf-2.1.3.tar.gz )   |
-| `2.1.4` compiled w/o `HAVE_AF_PACKET`, `HAVE_LINUX_UDP_H`, `HAVE_TUNTAP_TUN`, `HAVE_TUNTAP_TAP`!  | 2021-08-19    | [Source Code](https://nav.dl.sourceforge.net/project/iperf2/iperf-2.1.4.tar.gz)   |
+| Version        | Release day           | Source Code  | Comments |
+| :-------------: |:-------------:|:-------------:|
+| `2.0.5`   | 2010-07-08 | [Source Code](https://iperf.fr/download/source/iperf-2.0.5-source.tar.gz) | |
+| `2.0.10`  | 2017-08-11 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.10.tar.gz) | |
+| `2.0.11` | 2018-05-24 |  [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.11.tar.gz) | compiled w/o `HAVE_AF_PACKET` |
+| `2.0.12` | 2018-06-26 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.12.tar.gz) | compiled w/o `HAVE_AF_PACKET` |
+| `2.0.13` | 2019-01-22 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.13.tar.gz) | compiled w/o `HAVE_AF_PACKET` |
+| `2.1.3`  |   2021-07-15  | [Source Code](https://nav.dl.sourceforge.net/project/iperf2/iperf-2.1.3.tar.gz )   | compiled w/o `HAVE_AF_PACKET`, `HAVE_LINUX_UDP_H`! |
+| `2.1.4`  | 2021-08-19    | [Source Code](https://nav.dl.sourceforge.net/project/iperf2/iperf-2.1.4.tar.gz)   | compiled w/o `HAVE_AF_PACKET`, `HAVE_LINUX_UDP_H`, `HAVE_TUNTAP_TUN`, `HAVE_TUNTAP_TAP`!
 
 #### iPerf3
 
 | Version        | Release day           | Source Code  |
-| ------------- |:-------------:|-------------:|
+| :-------------: |:-------------:|:-------------:|
 | `3.1.6`    | 2017-02-02 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.1.6.tar.gz)  |
 | `3.1.7`     | 2017-03-03 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.1.7.tar.gz)  |
 | `3.2`     | 2017-06-26 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.2.tar.gz)  |
