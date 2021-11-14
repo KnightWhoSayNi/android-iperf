@@ -78,7 +78,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-2.0.11.tar.gz && \
     rm -f iperf-2.0.11.tar.gz
 
-COPY /iperf-2.0.11/* /tmp/iperf-2.0.11
+COPY /iperf-2.0.11/* /tmp/iperf-2.0.11/
 RUN cd /tmp/iperf-2.0.11 && \
     autoconf && \
     ./configure
@@ -90,7 +90,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-2.0.12.tar.gz && \
     rm -f iperf-2.0.12.tar.gz
 
-COPY /iperf-2.0.12/* /tmp/iperf-2.0.12
+COPY /iperf-2.0.12/* /tmp/iperf-2.0.12/
 RUN cd /tmp/iperf-2.0.12 && \
     autoconf && \
     ./configure
@@ -102,7 +102,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-2.0.13.tar.gz && \
     rm -f iperf-2.0.13.tar.gz
 
-COPY /iperf-2.0.13/* /tmp/iperf-2.0.13
+COPY /iperf-2.0.13/* /tmp/iperf-2.0.13/
 RUN cd /tmp/iperf-2.0.13 && \
     autoconf && \
     ./configure
@@ -114,7 +114,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-2.1.3.tar.gz && \
     rm -f iperf-2.1.3.tar.gz
 
-COPY /iperf-2.1.3/* /tmp/iperf-2.1.3
+COPY /iperf-2.1.3/* /tmp/iperf-2.1.3/
 RUN cd /tmp/iperf-2.1.3 && \
     autoconf && \
     ./configure
@@ -126,7 +126,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-2.1.4.tar.gz && \
     rm -f iperf-2.1.4.tar.gz
 
-COPY /iperf-2.1.4/* /tmp/iperf-2.1.4
+COPY /iperf-2.1.4/* /tmp/iperf-2.1.4/
 RUN cd /tmp/iperf-2.1.4 && \
     autoconf && \
     ./configure
@@ -162,7 +162,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-3.2.tar.gz && \
     rm -f iperf-3.2.tar.gz
 
-COPY /iperf-3.2/* /tmp/iperf-3.2
+COPY /iperf-3.2/* /tmp/iperf-3.2/
 RUN cd /tmp/iperf-3.2 && \
     ./fix.sh && \
     autoconf && \
@@ -175,7 +175,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-3.2rc1.tar.gz && \
     rm -f iperf-3.2rc1.tar.gz
 
-COPY /iperf-3.2rc1/* /tmp/iperf-3.2rc1
+COPY /iperf-3.2rc1/* /tmp/iperf-3.2rc1/
 RUN cd /tmp/iperf-3.2rc1 && \
     ./fix.sh && \
     autoconf && \
@@ -188,7 +188,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-3.3.tar.gz && \
     rm -f iperf-3.3.tar.gz
 
-COPY /iperf-3.3/* /tmp/iperf-3.3
+COPY /iperf-3.3/* /tmp/iperf-3.3/
 RUN cd /tmp/iperf-3.3 && \
     ./fix.sh && \
     autoconf && \
@@ -201,7 +201,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-3.4.tar.gz && \
     rm -f iperf-3.4.tar.gz
 
-COPY /iperf-3.4/* /tmp/iperf-3.4
+COPY /iperf-3.4/* /tmp/iperf-3.4/
 RUN cd /tmp/iperf-3.4 && \
     ./fix.sh && \
     autoconf && \
@@ -214,7 +214,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-3.5.tar.gz && \
     rm -f iperf-3.5.tar.gz
 
-COPY /iperf-3.5/* /tmp/iperf-3.5
+COPY /iperf-3.5/* /tmp/iperf-3.5/
 RUN cd /tmp/iperf-3.5 && \
     ./fix.sh && \
     autoconf && \
@@ -227,7 +227,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-3.6.tar.gz && \
     rm -f iperf-3.6.tar.gz
 
-COPY /iperf-3.6/* /tmp/iperf-3.6
+COPY /iperf-3.6/* /tmp/iperf-3.6/
 RUN cd /tmp/iperf-3.6 && \
     ./fix.sh && \
     autoconf && \
@@ -240,7 +240,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-3.7.tar.gz && \
     rm -f iperf-3.7.tar.gz
 
-COPY /iperf-3.7/* /tmp/iperf-3.7
+COPY /iperf-3.7/* /tmp/iperf-3.7/
 RUN cd /tmp/iperf-3.7 && \
     ./fix.sh && \
     autoconf && \
@@ -253,7 +253,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-3.8.tar.gz && \
     rm -f iperf-3.8.tar.gz
 
-COPY /iperf-3.8/* /tmp/iperf-3.8
+COPY /iperf-3.8/* /tmp/iperf-3.8/
 RUN cd /tmp/iperf-3.8 && \
     ./fix.sh && \
     autoconf && \
@@ -266,7 +266,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-3.8.1.tar.gz && \
     rm -f iperf-3.8.1.tar.gz
 
-COPY /iperf-3.8.1/* /tmp/iperf-3.8.1
+COPY /iperf-3.8.1/* /tmp/iperf-3.8.1/
 RUN cd /tmp/iperf-3.8.1 && \
     ./fix.sh && \
     autoconf && \
@@ -279,7 +279,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-3.9.tar.gz && \
     rm -f iperf-3.9.tar.gz
 
-COPY /iperf-3.9/* /tmp/iperf-3.9
+COPY /iperf-3.9/* /tmp/iperf-3.9/
 RUN cd /tmp/iperf-3.9 && \
     ./fix.sh && \
     autoconf && \
@@ -292,7 +292,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-3.10.tar.gz && \
     rm -f iperf-3.10.tar.gz
 
-COPY /iperf-3.10/* /tmp/iperf-3.10
+COPY /iperf-3.10/* /tmp/iperf-3.10/
 RUN cd /tmp/iperf-3.10 && \
     ./fix.sh && \
     ./configure
@@ -304,7 +304,7 @@ RUN cd /tmp && \
     tar -zxvf iperf-3.10.1.tar.gz && \
     rm -f iperf-3.10.1.tar.gz
 
-COPY /iperf-3.10.1/* /tmp/iperf-3.10.1
+COPY /iperf-3.10.1/* /tmp/iperf-3.10.1/
 RUN cd /tmp/iperf-3.10.1 && \
     ./fix.sh && \
     ./configure
