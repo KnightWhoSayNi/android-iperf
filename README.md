@@ -10,7 +10,7 @@
 >
 > [*https://iperf.fr/*](https://iperf.fr/)
 
-**Remark** No iPerf/iPerf3 source codes are included in this repo
+**Remark** No `iperf`/`iperf3` source codes are included in this repo
 
 ### Supported versions
 
@@ -18,10 +18,13 @@
 
 | Version        | Release day           | Source Code  |
 | ------------- |:-------------:|-------------:|
-| `2.0.5`    | 2010-07-08 | [Source Code](https://iperf.fr/download/source/iperf-2.0.5-source.tar.gz) |
-| `2.0.10`    | 2017-08-11 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.10.tar.gz) |
-| `2.0.12` compiled w/o `PTHREADS`!    | 2018-06-26 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.12.tar.gz) |
-| `2.0.13` compiled w/o `PTHREADS`!    | 2019-01-22 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.13.tar.gz) |
+| `2.0.5`   | 2010-07-08 | [Source Code](https://iperf.fr/download/source/iperf-2.0.5-source.tar.gz) |
+| `2.0.10`  | 2017-08-11 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.10.tar.gz) |
+| `2.0.11` compiled w/o `HAVE_AF_PACKET` | 2018-05-24 |  [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.11.tar.gz) |
+| `2.0.12` compiled w/o `HAVE_AF_PACKET` | 2018-06-26 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.12.tar.gz) |
+| `2.0.13` compiled w/o `HAVE_AF_PACKET`  | 2019-01-22 | [Source Code](https://astuteinternet.dl.sourceforge.net/project/iperf2/iperf-2.0.13.tar.gz) |
+| `2.1.3` compiled w/o `HAVE_AF_PACKET`, `HAVE_LINUX_UDP_H`!    |   2021-07-15  | [Source Code](https://nav.dl.sourceforge.net/project/iperf2/iperf-2.1.3.tar.gz )   |
+| `2.1.4` compiled w/o `HAVE_AF_PACKET`, `HAVE_LINUX_UDP_H`, `HAVE_TUNTAP_TUN`, `HAVE_TUNTAP_TAP`!  | 2021-08-19    | [Source Code](https://nav.dl.sourceforge.net/project/iperf2/iperf-2.1.4.tar.gz)   |
 
 #### iPerf3
 
@@ -39,11 +42,12 @@
 | `3.8`     | 2020-06-08 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.8.tar.gz)  |
 | `3.8.1`     | 2020-06-10 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.8.1.tar.gz)  |
 | `3.9`     | 2020-08-17 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.9.tar.gz)  |
-
+| `3.10`    | 2021-05-26 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.10.tar.gz)  |
+| `3.11`    | 2021-06-02 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.10.1.tar.gz)  |
 
 ### Download
 
-Pre-build iPerf/iPerf3 binaries for Android `7.0` (API `level 24`) with SDK `4333796` and NDK `r19` using [Travis-CI Deployment](https://travis-ci.com/KnightWhoSayNi/android-iperf).
+Compiled `iperf` and `iperf3` binaries using SDK `4333796` and NDK `r19` for devices with Android `9.0+` (API level `28+`) - [Travis-CI Deployment](https://travis-ci.com/KnightWhoSayNi/android-iperf).
 
 | ABI        | Binaries           |
 | ------------- |:-------------:|
@@ -86,33 +90,36 @@ docker stop android-ndk-container
 
 ## Usage
 
-To upload binary file to an Android device
+Upload a binary file (with compatible ABI) to an Android device
 
 ```shell
-adb push <LOCAL_PATH_TO_BINARY_FILE> /data/local/tmp/<BINARY_NAME>
+adb push <LOCAL_PATH_TO_BINARY_FILE>/<BINARY_NAME> /data/local/tmp/<BINARY_NAME>
 adb shell chmod 777 /data/local/tmp/<BINARY_NAME>
 ```
 
-Set a default `iPerf2` version
+### iperf
+
+Set a default `iperf`
 ```shell
 adb shell ln -s /data/local/tmp/<IPERF2_BINARY_NAME> iperf
 ```
 
-Executing `iPerf2`
+Execute `iperf`
 ```shell
 adb shell /data/local/tmp/iperf <IPERF_ARGUMENTS>
 ```
 
-Set a default `iPerf3` version
+### iperf3 
+
+Set a default `iperf3`
 ```shell
 adb shell ln -s /data/local/tmp/<IPERF3_BINARY_NAME> iperf3
 ```
 
-Executing `iPerf3`
+Execute `iperf3`
 ```shell
 adb shell /data/local/tmp/iperf3 <IPERF_ARGUMENTS>
 ```
-
 
 ## License
 
