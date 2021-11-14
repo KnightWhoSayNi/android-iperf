@@ -43,7 +43,7 @@
 | `3.8.1`     | 2020-06-10 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.8.1.tar.gz)  |
 | `3.9`     | 2020-08-17 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.9.tar.gz)  |
 | `3.10`    | 2021-05-26 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.10.tar.gz)  |
-| `3.11`    | 2021-06-02 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.10.1.tar.gz)  |
+| `3.10.1`    | 2021-06-02 | [Source Code](https://downloads.es.net/pub/iperf/iperf-3.10.1.tar.gz)  |
 
 ### Download
 
